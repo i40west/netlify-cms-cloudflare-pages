@@ -22,7 +22,9 @@ In your Cloudflare Pages project, go to Settings -> Environment variables. Add t
 
 Take the `functions` directory from this repo and add it to your project at the top level. **NOTE:** This means the actual top-level of the project itself, _not_ the top level of your output directory. So, if you’re using Hugo, `functions` goes at the top of the project next to `content` and `layouts` and `archetypes` and so forth, _not_ inside the `static` or `assets` directory.
 
-If you haven’t already installed the Netlify CMS files, take the `static/admin` directory from this repo and add it to your `static` directory (for Hugo) or wherever you add files to be deployed as-is to your site. There are two files under `admin`, a stub HTML file that loads the CMS, and the CMS config file `config.yml`. The config file included here is a starter file only; you need to set this up for your site, which is beyond the scope of these instructions. However, you must set `base_url` in this config to the URL of your site (like `https://example.com`). Setting `auth_endpoint` here is optional because the default path works for the way this repo is set up.
+If you haven’t already installed the Netlify CMS files, take the `static/admin` directory from this repo and add it to your `static` directory (for Hugo) or wherever you add files to be deployed as-is to your site. There are two files under `admin`, a stub HTML file that loads the CMS, and the CMS config file `config.yml`. You can change the name of the `admin` directory.
+
+The config file included here is a starter file only; you need to set this up for your site, which is beyond the scope of these instructions. However, you must set `base_url` in this config to the URL of your site (like `https://example.com`). Setting `auth_endpoint` here is optional because the default path works for the way this repo is set up.
 
 ### 4. Profit!
 
