@@ -29,3 +29,7 @@ The config file included here is a starter file only; you need to set this up fo
 ### 4. Profit!
 
 Publish your site and let Cloudflare build it. Go to `/admin/` on your site, and you should see a Login with Github button, which should authenticate you to Github and launch the CMS.
+
+## Credits
+
+I've included a dark-mode CSS file from [Nats-ji/netlify-cms-dark-mode](https://github.com/Nats-ji/netlify-cms-dark-mode).

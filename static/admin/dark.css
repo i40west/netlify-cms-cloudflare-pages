@@ -1,0 +1,866 @@
+@media (min-width: 1120px) {
+  .css-1f3mf5k-StyledModal {
+    width: calc(940px);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --body-bg-color: #0d1117;
+    --primary-text-color: #c9d1d9;
+    --secondary-text-color: #8b949e;
+    --success-text-color: #3fb950;
+    --danger-text-color: #ff003b;
+    --disabled-text-color: #484f58;
+    --url-text-color: #58a6ff;
+    --input-bg-color: #0d1117;
+    --input-border-color: #21262d;
+    --input-placeholder-color: #8b949e;
+    --btn-gray-default-bg: #21262d;
+    --btn-gray-default-border: #30363d;
+    --btn-gray-hover-bg: #30363d;
+    --btn-gray-hover-border: #8b949e;
+    --btn-gray-focus-bg: #21262d;
+    --btn-gray-disabled-text: #484f58;
+    --btn-gray-disabled-bg: #21262d;
+    --btn-gray-disabled-border: #30363d;
+    --btn-red-default-text: #f85149;
+    --btn-red-default-bg: #21262d;
+    --btn-red-default-border: #30363d;
+    --btn-red-hover-text: #fff;
+    --btn-red-hover-bg: #da3633;
+    --btn-red-hover-border: #f85149;
+    --btn-red-active-bg: #b62324;
+    --btn-red-active-border: rgb(240 246 252 / 10%);
+    --btn-red-disabled-text: rgb(248 81 73 / 50%);
+    --btn-red-disabled-bg: #0d1117;
+    --btn-green-default-text: #fff;
+    --btn-green-default-bg: #238636;
+    --btn-green-default-border: #2ea043;
+    --btn-green-hover-bg: #2ea043;
+    --btn-green-hover-border: #3fb950;
+    --btn-green-active-bg: #238636;
+    --btn-green-disabled-text: rgb(240 246 252 / 50%);
+    --btn-green-disabled-bg: rgb(35 134 54 / 60%);
+    --btn-green-disabled-border: transparent;
+    --scrollbar-thumb-color: #4c5258;
+    --scrollbar-thumb-hover-color: #30363d;
+    --dropdownlist-bg: #21262d;
+    --dropdownlist-border: #30363d;
+    --dropdownlist-shadow: 0 16px 32px rgba(1,4,9,0.85);
+    --dropdownitem-bg: #21262d;
+    --dropdownitem-hover-bg: #161b22;
+    --header-bg: #161b22;
+    --header-button-text: #8b949e;
+    --header-button-text-hover: #c9d1d9;
+    --header-button-text-active: #fff;
+    --header-dropdownitem-hover-text: #f0f6fc;
+    --header-dropdownitem-hover-bg: #1f6feb;
+    --card-bg: #0d1117;
+    --card-border: #30363d;
+    --card-hover-bg: #161b22;
+    --modal-bg-color: #0d1117;
+    --modal-border-color: #30363d;
+    --modal-box-shadow: 0 0 18px rgb(0 0 0 / 40%);
+    --card-active-border: #8b949e;
+    --checkerboard-dark-color: #161b22;
+    --checkerboard-bg-color: #21262d;
+    --widgets-bg-color: #090d13;
+    --widgets-label-bg-color: #21262d;
+    --widgets-border-color: #21262d;
+    --widgets-active-label-bg-color: #388bfd;
+    --widgets-active-border-color: #388bfd;
+    --widgets-error-label-bg-color: #ff003b;
+    --widgets-error-border-color: #ff003b;
+    --rdtPicker-bg-color: #21262d;
+    --rdtPicker-border-color: #30363d;
+    --rdtPicker-shadow: 0 16px 32px rgb(1 4 9 / 85%);
+    --rdtPicker-hover-bg-color: #161b22;
+    --rdtPicker-active-bg-color: #388bfd;
+    --color-picker-bg-color: #21262d;
+    --color-picker-border-color: #30363d;
+    --color-picker-shadow: 0 16px 32px rgb(1 4 9 / 85%);
+    --toggle-true-bg-color: #8b949e;
+    --toggle-false-bg-color: #30363d;
+    --toggle-handle-color: #414b54;
+    --topbar-bg-color: #161b22;
+    --short-code-bg-color: rgb(240 246 252 / 15%);
+    --code-block-bg-color: #161b22;
+    --code-line-number-color: #8b949e;
+  }
+
+  body {
+    background-color: var(--body-bg-color);
+    color: var(--primary-text-color);
+  }
+  a {
+    font-size: inherit;
+    color: var(--url-text-color);
+  }
+  h1, h2, h3, h4, h5, h6, p {
+    color: inherit;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb-color) !important;
+    border: unset !important;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: var(--scrollbar-thumb-hover-color) !important;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--body-bg-color) !important;
+  }
+  iframe#netlify-identity-widget {
+    z-index: 400 !important;
+  }
+  /* button */
+  /* gray button */
+  [class*="button-default-gray"],
+  [class*="button-medium-gray "],
+  [class*="button-default-disabled"],
+  [class*="button-default-lightBlue"],
+  [class*="AddButton-button"],
+  [class*="FileWidgetButton-button"],
+  [class*="SaveButton-lightBlue"],
+  [class*="StatusButton"],
+  [class*="StyledDropdownButton"]:not([class*="grayText"]):not([class*="Publish"])
+  {
+    color: var(--primary-text-color);
+    background-color: var(--btn-gray-default-bg);
+    border: 1px solid;
+    border-color: var(--btn-gray-default-border);
+    border-radius: 6px;
+    transition: .2s cubic-bezier(.3,0,.5,1);
+    transition-property: color,background-color,border-color;
+  }
+
+  [class*="button-default-gray"]:hover,
+  [class*="button-medium-gray "]:hover,
+  [class*="button-default-disabled"]:hover,
+  [class*="button-default-lightBlue"]:hover,
+  [class*="AddButton-button"]:hover,
+  [class*="FileWidgetButton-button"]:hover,
+  [class*="SaveButton-lightBlue"]:hover,
+  [class*="StatusButton"]:hover,
+  [class*="StyledDropdownButton"]:not([class*="grayText"]):not([class*="Publish"]):hover
+  {
+    background-color: var(--btn-gray-hover-bg);
+    border-color: var(--btn-gray-hover-border);
+    transition-duration: .1s;
+  }
+
+  [class*="button-default-gray"]:focus,
+  [class*="button-medium-gray "]:focus,
+  [class*="button-default-disabled"]:focus,
+  [class*="button-default-lightBlue"]:focus,
+  [class*="AddButton-button"]:focus,
+  [class*="FileWidgetButton-button"]:focus,
+  [class*="SaveButton-lightBlue"]:focus,
+  [class*="StatusButton"]:focus,
+  [class*="StyledDropdownButton"]:not([class*="grayText"]):not([class*="Publish"]):focus
+  {
+    color: var(--primary-text-color);
+    background-color: var(--btn-gray-focus-bg);
+  }
+
+  [class*="button-default-disabled"][disabled] {
+    color: var(--btn-gray-disabled-text);
+    background-color: var(--btn-gray-disabled-bg);
+    border: 1px solid;
+    border-color: var(--btn-gray-disabled-border);
+    border-radius: 6px;
+  }
+
+  /* red button */
+  [class*="utton-lightRed"],
+  [class*="FileWidgetButtonRemove-button"],
+  [class*="DeleteButton"]
+  {
+    color: var(--btn-red-default-text);
+    background-color: var(--btn-red-default-bg);
+    border: 1px solid;
+    border-color: var(--btn-red-default-border);
+    border-radius: 6px;
+    transition: .2s cubic-bezier(.3,0,.5,1);
+    transition-property: color,background-color,border-color;
+  }
+
+  [class*="utton-lightRed"]:hover,
+  [class*="FileWidgetButtonRemove-button"]:hover,
+  [class*="DeleteButton"]:hover
+  {
+    color: var(--btn-red-hover-text);
+    background-color: var(--btn-red-hover-bg);
+    border-color: var(--btn-red-hover-border);
+    transition-duration: .1s;
+  }
+
+  [class*="utton-lightRed"]:focus,
+  [class*="FileWidgetButtonRemove-button"]:focus,
+  [class*="DeleteButton"]:focus
+  {
+    border-color: var(--btn-red-hover-border);
+  }
+
+  [class*="utton-lightRed"]:active,
+  [class*="FileWidgetButtonRemove-button"]:active,
+  [class*="DeleteButton"]:active
+  {
+    color: var(--btn-red-hover-text);
+    background-color: var(--btn-red-active-bg);
+    border-color: var(--btn-red-active-border);
+  }
+
+  [class*="utton-lightRed"][disabled] {
+    color: var(--btn-red-disabled-text);
+    background-color: var(--btn-red-disabled-bg);
+    border: 1px solid;
+    border-color: var(--btn-red-default-border);
+    border-radius: 6px;
+  }
+  /* green button */
+  [class*="button-green"],
+  [class*="PublishButton"],
+  [class*="publishedButton"]
+  {
+    color: var(--btn-green-default-text);
+    background-color: var(--btn-green-default-bg);
+    border: 1px solid;
+    border-color: var(--btn-green-default-border);
+    border-radius: 6px;
+    transition: .2s cubic-bezier(.3,0,.5,1);
+    transition-property: color,background-color,border-color;
+  }
+
+  [class*="button-green"]:hover,
+  [class*="PublishButton"]:hover,
+  [class*="publishedButton"]:hover
+  {
+    background-color: var(--btn-green-hover-bg);
+    border-color: var(--btn-green-hover-border);
+    transition-duration: .1s;
+  }
+
+  [class*="button-green"]:active,
+  [class*="PublishButton"]:active,
+  [class*="publishedButton"]:active
+  {
+    background-color: var(--btn-green-active-bg);
+  }
+
+  [class*="button-green"]:focus,
+  [class*="PublishButton"]:focus,
+  [class*="publishedButton"]:focus
+  {
+    background-color: var(--btn-green-active-bg);
+    border-color: var(--btn-green-hover-border);
+  }
+
+  [class*="button-green"][disabled],
+  [class*="PublishButton"][disabled]
+  {
+    color: var(--btn-green-disabled-text);
+    background-color: var(--btn-green-disabled-bg);
+    border: 1px solid;
+    border-color: var(--btn-green-disabled-border);
+    border-radius: 6px;
+  }
+  /* notification */
+  [class*="toast-success"] {
+    color: var(--success-text-color);
+    background-color: var(--dropdownitem-bg);
+    box-shadow: var(--dropdownlist-shadow);
+    border-radius: 6px;
+  }
+  [class*="toast-danger"] {
+    color: var(--danger-text-color);
+    background-color: var(--dropdownitem-bg);
+    box-shadow: var(--dropdownlist-shadow);
+    border-radius: 6px;
+  }
+
+  /* dropdown */
+  ul[class*="dropdownList"],
+  ul[class*="Suggestions"],
+  [class*="ControlContainer"] [class*="menu"]
+  {
+    background-color: var(--dropdownlist-bg);
+    border: 1px solid var(--dropdownlist-border);
+    border-radius: 6px;
+    box-shadow: var(--dropdownlist-shadow);
+  }
+
+  ul[class*="dropdownList"] > [class*="dropdownItem"],
+  ul[class*="Suggestions"] > li[class*="SuggestionItem"],
+  [class*="ControlContainer"] [class*="menu"] [class*="option"]
+  {
+    color: var(--primary-text-color);
+    background-color: var(--dropdownitem-bg);
+    border-width: 0;
+  }
+
+  ul[class*="dropdownList"] > [class*="dropdownItem"]:hover,
+  ul[class*="Suggestions"] > li[class*="SuggestionItem"]:hover,
+  [class*="ControlContainer"] [class*="menu"] [class*="option"]:hover
+  {
+    color: inherit;
+    background-color: var(--dropdownitem-hover-bg);
+  }
+
+  li[class*="SuggestionItem"] {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 20px 6px 32px;
+  }
+
+  li.css-fmy46h-SuggestionItem::after {
+    content: "✓";
+    position: relative;
+    right: 0px;
+  }
+  [role="menuitem"].css-zcym63-button-dropdownItem-StyledMenuItem > span {
+    display: contents;
+  }
+  [role="menuitem"].css-zcym63-button-dropdownItem-StyledMenuItem > span:only-child::after {
+    content: "✓";
+    position: relative;
+    right: 0px;
+  }
+
+  div.css-8fe0f3-option::after {
+    content: "✓";
+    position: absolute;
+    right: 22px;
+  }
+
+  [role="menuitem"] > input[type="checkbox"] {
+    display: none;
+  }
+  [role="menuitem"] > input[type="checkbox"] + span::before {
+      content: "✓";
+      color: transparent;
+      display: inline-block;
+      padding-right: 6px;
+  }
+
+  [role="menuitem"] > input[type="checkbox"]:checked + span::before {
+      color: inherit;
+  }
+
+  li[class*="SuggestionHeader"] {
+    color: inherit;
+  }
+
+  [class*="MenuItemIconContainer"] > [class*="IconWrapper"] {
+    color: inherit;
+  }
+
+  ul[class*="dropdownList"]::-webkit-scrollbar-track,
+  ul[class*="Suggestions"]::-webkit-scrollbar-track,
+  [class*="ControlContainer"] [class*="menu"] > div::-webkit-scrollbar-track {
+    background: var(--dropdownlist-bg) !important;
+  }
+
+  /*header*/
+  header[class*="AppHeader"] {
+    background-color: var(--header-bg);
+  }
+
+  header [class*="AppHeaderButton"] {
+    color: var(--header-button-text);
+  }
+
+  header [class*="AppHeaderButton"]:hover, header [class*="AppHeaderButton"]:focus {
+    color: var(--header-button-text-hover);
+  }
+
+  header [class*="AppHeaderButton"].header-link-active {
+    color: var(--header-button-text-active);
+  }
+
+  header [class*="AppHeaderNavList"] [class*="IconWrapper"] {
+    color: inherit !important;
+  }
+
+  header ul[class*="dropdownList"] > [class*="dropdownItem"]:hover,
+  [class*="EditorContainer"] > [class*="ToolbarContainer"] ul[class*="dropdownList"] > [class*="dropdownItem"]:hover {
+    color: var(--header-dropdownitem-hover-text);
+    background-color: var(--header-dropdownitem-hover-bg);
+    z-index: 320;
+  }
+
+  [class*="EditorContainer"] > [class*="ToolbarContainer"] {
+    background-color: var(--header-bg);
+  }
+
+  [class*="EditorContainer"] > [class*="ToolbarContainer"] [class*="ToolbarSectionBackLink"] {
+    border-color: var(--btn-gray-default-border);
+  }
+
+  [class*="EditorContainer"] > [class*="ToolbarContainer"] [class*="ToolbarSectionBackLink"]:hover,
+  [class*="EditorContainer"] > [class*="ToolbarContainer"] [class*="ToolbarSectionBackLink"]:focus
+  {
+    background-color: var(--btn-gray-default-bg);
+  }
+
+  [class*="EditorContainer"] > [class*="ToolbarContainer"] [class*="ToolbarSectionBackLink"] [class*="BackArrow"],
+  [class*="EditorContainer"] > [class*="ToolbarContainer"] [class*="ToolbarSectionBackLink"] [class*= "BackCollection"]
+  {
+    color: var(--primary-text-color);
+  }
+
+  [class*="EditorContainer"] > [class*="ToolbarContainer"] [class*="ToolbarSectionBackLink"] [class*="textBadgeSuccess"]
+  {
+    color: var(--success-text-color);
+  }
+
+  [class*="EditorContainer"] > [class*="ToolbarContainer"] [class*="ToolbarSectionMeta"] {
+    border-color: var(--btn-gray-default-border);
+  }
+  /* card */
+  [class*="CollectionContainer"] [class*="Container-card"],
+  [class*="CollectionContainer"] [class*="ListCard-card"],
+  [class*="CollectionContainer"] [class*="GridCard-card"],
+  [class*="WorkflowContainer"] [class*="WorkflowTop-card-cardTop"],
+  [class*="WorkflowContainer"] [class*="WorkflowCardContainer-card"],
+  [class*="WorkflowContainer"] [class*="ColumnHeader"]
+  {
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    box-shadow: none;
+    border-radius: 6px;
+  }
+
+  [class*="CollectionContainer"] [class*="GridCardLink"] {
+    color: var(--primary-text-color);
+    background-color: unset;
+  }
+
+  [class*="CollectionContainer"] [class*="ListCardLink"] {
+    color: var(--primary-text-color);
+  }
+
+  [class*="CollectionContainer"] [class*="GridCardLink"] [class*="CardBody"]::after {
+    content: unset;
+  }
+
+  [class*="CollectionContainer"] [class*="ListCardLink"]:hover,
+  [class*="CollectionContainer"] [class*="GridCardLink"]:hover,
+  [class*="WorkflowContainer"] [class*="WorkflowCardContainer-card"]:hover
+  {
+    color: inherit;
+    background-color: var(--card-hover-bg);
+  }
+
+  [class*="CardButtonContainer"] {
+    background-color: inherit;
+  }
+
+  a[class*="AppHeaderTestRepoIndicator"], a[class*="AppHeaderSiteLink"] {
+    color: var(--secondary-text-color);
+  }
+  a[class*="RefreshPreviewButton"], a[class*="RefreshPreviewButton"] > [class*="IconWrapper"] {
+    color: var(--url-text-color);
+  }
+  /* auth page */
+  section[class*="StyledAuthenticationPage"] a[class*="GoBackButtonStyle"] {
+    color: var(--secondary-text-color);
+  }
+  section[class*="StyledAuthenticationPage"] a[class*="GoBackButtonStyle"]>p[class*="ButtonText"] {
+    color: inherit;
+  }
+  section[class*="StyledAuthenticationPage"] span[class*="PageLogoIcon"], section[class*="StyledAuthenticationPage"] a[class*="GoBackButtonStyle"]:hover {
+    color: var(--primary-text-color);
+  }
+  /* contents */
+  /*sidebar*/
+  [class*="SidebarHeading"] {
+    color: inherit;
+  }
+  [class*="SidebarNavLink"], [class*="TreeNavLink"] {
+    border-left: none;
+    color: var(--header-button-text);
+  }
+  [class*="SidebarNavLink"]:hover, [class*="TreeNavLink"]:hover {
+    color: var(--header-button-text);
+    background-color: var(--dropdownitem-hover-bg);
+  }
+  [class*="SidebarNavLink"].sidebar-active, [class*="TreeNavLink"].sidebar-active {
+    color: var(--header-button-text-active);
+    background-color: var(--header-dropdownitem-hover-bg);
+  }
+  [class*="SearchContainer"] input[class*="SearchInput"] {
+    background-color: var(--input-bg-color);
+    border: 1px solid var(--input-border-color);
+    color: inherit;
+  }
+  [class*="SearchContainer"] [class*="IconWrapper"] {
+    color: var(--input-placeholder-color);
+  }
+  [class*="SearchContainer"] input[class*="SearchInput"]::placeholder {
+    color: var(--input-placeholder-color);
+  }
+
+  /*collection*/
+  [class*="CollectionControlsContainer"] .css-14aa6nw-StyledDropdownButton-button-default-caret-caretDown-Button-button-medium-grayText-ControlButton {
+    color: var(--header-button-text);
+  }
+  [class*="CollectionControlsContainer"] .css-14aa6nw-StyledDropdownButton-button-default-caret-caretDown-Button-button-medium-grayText-ControlButton:hover {
+    color: var(--header-button-text-hover);
+  }
+  [class*="CollectionControlsContainer"] .css-58ai8s-StyledDropdownButton-button-default-caret-caretDown-Button-button-medium-grayText-ControlButton {
+    color: var(--header-button-text-active);
+  }
+  [class*="CollectionControlsContainer"] .css-1jfbwn6-ViewControlsButton-button {
+    color: var(--header-button-text);
+  }
+  [class*="CollectionControlsContainer"] .css-1jfbwn6-ViewControlsButton-button:hover {
+    color: var(--header-button-text-hover);
+  }
+  [class*="CollectionControlsContainer"] .css-1fh4556-ViewControlsButton-button {
+    color: var(--header-button-text-active);
+  }
+  [class*="GroupHeading"] [class*="cardTopDescription"] {
+    color: var(--secondary-text-color);
+  }
+  /* workflow */
+  [class*="WorkflowContainer"] [class*="ColumnHeader"] {
+    color: var(--primary-text-color);
+  }
+  .css-1njtcvy-column-WorkflowList::before, .css-1njtcvy-column-WorkflowList::after,
+  .css-lhns9r-column-columnHovered-WorkflowList::before, .css-lhns9r-column-columnHovered-WorkflowList::after
+  {
+    background-color: var(--card-border);
+    height: 100%;
+    top: 0px;
+  }
+  [class*="WorkflowLink"] [class*="CardCollection"], [class*="WorkflowLink"] [class*="CardTitle"] {
+    color: var(--primary-text-color);
+  }
+  [class*="WorkflowLink"] [class*="CardDate"], [class*="WorkflowLink"] [class*="CardBody"], p[class*="WorkflowTopDescription"] {
+    color: var(--secondary-text-color);
+  }
+
+  /* media */
+  [class*="StyledModal"] {
+    background-color: var(--modal-bg-color);
+    box-shadow: var(--modal-box-shadow);
+    border: 1px solid var(--modal-border-color);
+    border-radius: 6px;
+  }
+  [class*="StyledModal"] [class*="CloseButton"] {
+    color: var(--primary-text-color);
+    background-color: var(--btn-gray-default-bg);
+    border: 1px solid;
+    border-color: var(--btn-gray-default-border);
+  }
+  [class*="StyledModal"] .css-1er4xqr-Card {
+    border: 2px solid var(--card-border);
+  }
+  [class*="StyledModal"] .css-1v1y2wn-Card {
+    border: 2px solid var(--card-active-border);
+  }
+  [class*="StyledModal"] [class*="checkerboard"] {
+    background-color: var(--checkerboard-bg-color);
+    border-bottom: 2px solid var(--modal-border-color);
+    background-image: linear-gradient(45deg, var(--checkerboard-dark-color) 25%, transparent 25%, transparent 75%, var(--checkerboard-dark-color) 75%, var(--checkerboard-dark-color)),
+                      linear-gradient(45deg, var(--checkerboard-dark-color) 25%, transparent 25%, transparent 75%, var(--checkerboard-dark-color) 75%, var(--checkerboard-dark-color));
+  }
+  [class*="StyledModal"] [class*="DraftText"] {
+    color: inherit;
+    background-color: var(--modal-border-color);
+    padding: 5px 8px;
+  }
+  [class*="StyledModal"] [class*="CardText"] {
+    color: inherit;
+  }
+
+  /*editor*/
+  [class*="EditorContainer"] [class*="card-splitPane"] {
+    background-color: var(--body-bg-color);
+  }
+  #preview-pane {
+    background-color: var(--body-bg-color);
+    border-radius: 0;
+  }
+  .Resizer.vertical {
+    width: 5px;
+    border-right: 1px solid var(--modal-border-color);
+  }
+  .Resizer.vertical::before {
+    content: none;
+  }
+  button.css-1glyzdz-ButtonRound-button-EditorToggle {
+    color: var(--toggle-true-bg-color);
+    background-color: var(--btn-gray-default-bg);
+    border: 1px solid;
+    border-color: var(--btn-gray-default-border);
+    transition: .2s cubic-bezier(.3,0,.5,1);
+    transition-property: color,background-color,border-color;
+  }
+  button.css-1f8dk1z-ButtonRound-button-EditorToggle {
+    color: var(--toggle-false-bg-color);
+    background-color: var(--btn-gray-default-bg);
+    border: 1px solid;
+    border-color: var(--btn-gray-default-border);
+    transition: .2s cubic-bezier(.3,0,.5,1);
+    transition-property: color,background-color,border-color;
+  }
+  button.css-1glyzdz-ButtonRound-button-EditorToggle:hover {
+    color: var(--header-button-text-active);
+    background-color: var(--btn-gray-hover-bg);
+    border-color: var(--btn-gray-hover-border);
+    transition-duration: .1s;
+  }
+  button.css-1f8dk1z-ButtonRound-button-EditorToggle:hover {
+    color: var(--secondary-text-color);
+    background-color: var(--btn-gray-hover-bg);
+    border-color: var(--btn-gray-hover-border);
+    transition-duration: .1s;
+  }
+
+  /*widgets*/
+  [class*="FieldLabel"]::after {
+    background-color: var(--body-bg-color);
+  }
+  [class*="pcief1-FieldLabel"] {
+    color: var(--primary-text-color);
+    background-color: var(--widgets-label-bg-color);
+    padding: 3px 8px 2px;
+    text-transform: capitalize;
+  }
+  .css-83wr9v, .css-2ek3w9, .css-wesa1q-TextControl, .css-182avcw, .css-18h6btn, .css-12fzmby, .css-xa00c7, .css-1d0dxug {
+    color: inherit;
+    background-color: var(--widgets-bg-color);
+    border: 1px solid var(--widgets-border-color);
+    border-radius: 0 6px 6px;
+  }
+  [class*="1vur7zs-FieldLabel"] {
+    color: var(--header-button-text-active);
+    background-color: var(--widgets-active-label-bg-color);
+    padding: 3px 8px 2px;
+    text-transform: capitalize;
+  }
+  .css-188efjc, .css-3yr7zq-TextControl, .css-12fzmby {
+    color: inherit;
+    background-color: var(--widgets-bg-color);
+    border: 1px solid var(--widgets-active-border-color);
+    border-radius: 0 6px 6px;
+  }
+  .css-1noq96f-FieldLabel-fieldLabel {
+    background-color: var(--widgets-error-label-bg-color);
+    padding: 3px 8px 2px;
+    text-transform: capitalize;
+  }
+  .css-9guxbf-ControlErrorsList {
+    color: var(--danger-text-color);
+  }
+  .css-1caau9x, .css-xo8dlj, .css-14hxnzs-TextControl, .css-1eeq9l0-TextControl, .css-ntdq13 {
+    color: inherit;
+    background-color: var(--widgets-bg-color);
+    border: 1px solid var(--widgets-error-border-color);
+    border-radius: 0 6px 6px;
+  }
+  /*dropdown*/
+  [class*="ControlContainer"] div[class$="-control"] {
+    background-color: transparent;
+  }
+  [class*="ControlContainer"] div[class$="-control"] [class*="indicatorContainer"] {
+    color: var(--input-placeholder-color);
+  }
+  [class*="ControlContainer"] div[class$="-control"] [class*="indicatorContainer"]:hover {
+    color: var(--header-button-text-hover);
+  }
+  [class*="ControlContainer"] div[class$="-control"] [class*="-loadingIndicator"] > span {
+    background-color: var(--input-placeholder-color);
+  }
+  [class*="ControlContainer"] div[class$="-control"] [class*="css-1g6gooi"], [class*="ControlContainer"] div[class$="-control"] [class*="-singleValue"] {
+    color: inherit;
+  }
+  /*date*/
+  .rdt .rdtPicker {
+    background-color: var(--rdtPicker-bg-color);
+    box-shadow: var(--rdtPicker-shadow);
+    border: 1px solid var(--rdtPicker-border-color);
+    border-radius: 6px;
+  }
+  .rdt .rdtPicker thead tr:first-child th:hover, .rdt .rdtPicker td.rdtDay:hover, .rdt .rdtPicker td.rdtHour:hover, .rdt .rdtPicker td.rdtMinute:hover, .rdt .rdtPicker td.rdtSecond:hover,
+  .rdt .rdtPicker .rdtTimeToggle:hover, .rdt .rdtPicker .rdtCounter .rdtBtn:hover, .rdt .rdtPicker td.rdtMonth:hover, .rdt .rdtPicker td.rdtYear:hover
+  {
+    background-color: var(--rdtPicker-hover-bg-color);
+  }
+  .rdt .rdtPicker td.rdtActive, .rdt .rdtPicker td.rdtActive:hover {
+    background-color: var(--rdtPicker-active-bg-color);
+  }
+  .rdt .rdtPicker td.rdtOld, .rdt .rdtPicker td.rdtNew {
+    color: var(--disabled-text-color);
+  }
+  .rdt .rdtPicker td.rdtToday::before {
+    border-bottom: 7px solid var(--rdtPicker-active-bg-color);
+  }
+  .rdt .rdtPicker th {
+    border-bottom: 1px solid var(--rdtPicker-border-color);
+  }
+  /*image uplaod*/
+  [class*="ImageWrapper-checkerboard"] {
+    border: 2px solid var(--widgets-border-color);
+    background-color: var(--checkerboard-bg-color);
+    background-image: linear-gradient(45deg, var(--checkerboard-dark-color) 25%, transparent 25%, transparent 75%, var(--checkerboard-dark-color) 75%, var(--checkerboard-dark-color)),
+                      linear-gradient(45deg, var(--checkerboard-dark-color) 25%, transparent 25%, transparent 75%, var(--checkerboard-dark-color) 75%, var(--checkerboard-dark-color));
+  }
+  /*color picker*/
+  [class*="ColorSwatch"] {
+    border-color: var(--btn-gray-default-border);
+  }
+  .css-177o7zx-ColorSwatch {
+    color: var(--primary-text-color);
+    background-color: var(--btn-gray-default-bg);
+  }
+  .chrome-picker {
+    background: var(--color-picker-bg-color) !important;
+    overflow: hidden;
+    border: 1px solid var(--color-picker-border-color);
+    border-radius: 6px !important;
+    box-shadow: var(--color-picker-shadow) !important;
+  }
+  [id^="rc-editable-input-"] {
+    box-shadow: none !important;
+    background-color: var(--color-picker-bg-color);
+    border: 1px solid var(--color-picker-border-color) !important;
+    border-radius: 4px !important;
+    color: inherit !important;
+  }
+  div.chrome-picker > div >.flexbox-fix:nth-child(1) > div:nth-child(1) > div > div:nth-child(1) {
+    box-shadow: none !important;
+    border: 1px solid var(--color-picker-border-color);
+  }
+  div.chrome-picker > div >.flexbox-fix:nth-child(1) > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(1)::after {
+    content: "";
+    height: 100%;
+    display: block;
+    background-color: white;
+  }
+  div.chrome-picker > div >.flexbox-fix:nth-child(2) > div:nth-child(2) svg {
+    fill: var(--secondary-text-color) !important;
+  }
+  div.chrome-picker > div >.flexbox-fix:nth-child(2) > div:nth-child(2) svg:hover {
+    fill: var(--primary-text-color) !important;
+    background: var(--btn-gray-default-border) !important;
+  }
+  /* toggle */
+  [class*=ToggleContainer-StyledToggle][aria-checked="true"] > span[class*="ToggleBackground"] {
+    background-color: var(--toggle-true-bg-color);
+  }
+  [class*=ToggleContainer-StyledToggle][aria-checked="false"] > span[class*="ToggleBackground"] {
+    background-color: var(--toggle-false-bg-color);
+  }
+  [class*=ToggleContainer-StyledToggle] > span[class*="ToggleHandle"] {
+    background-color: var(--toggle-handle-color);
+  }
+  /* object */
+  [class*="listControlItem"] {
+    border: 1px solid var(--widgets-border-color);
+    border-radius: 6px;
+  }
+  [class*="TopBarContainer"], [class*="StyledListItemTopBar"], [class*="NestedObjectLabel"] {
+    background-color: var(--topbar-bg-color);
+    border-top-right-radius: 6px;
+  }
+  .css-1cjg468, .css-55unpk {
+    border: 0px;
+    color: inherit;
+    background-color: var(--widgets-bg-color);
+  }
+  [class*="TopBarContainer"] button[class*="ExpandButton"],
+  [class*="StyledListItemTopBar"] [class*="TopBarButton"]
+  {
+    color: var(--header-button-text);
+  }
+  [class*="TopBarContainer"] button[class*="ExpandButton"]:hover,
+  [class*="StyledListItemTopBar"] [class*="TopBarButton"]:hover
+  {
+    color: var(--header-button-text-hover);
+  }
+  /* markdown */
+  [class*="cms-editor"] {
+    border: 1px solid var(--widgets-border-color);
+    border-radius: 0 6px 6px;
+  }
+  [class*="cms-editor"] [class*="ToolbarContainer"] {
+    background-color: var(--topbar-bg-color);
+    border-top-right-radius: 6px;
+  }
+  .css-12vfcwo, .css-isnoua {
+    border-color: transparent;
+    color: inherit;
+    background-color: var(--widgets-bg-color);
+  }
+  .css-189bh5w, .css-f8f1e2 {
+    border-color: var(--widgets-error-border-color);
+    color: inherit;
+    background-color: var(--widgets-bg-color);
+  }
+  [class*="cms-editor"] [class*="ToolbarContainer"] button[class*="StyledToolbarButton"],
+  [class*="cms-editor"] [class*="ToolbarContainer"] div[class*="ToolbarDropdownWrapper"]
+  {
+    color: var(--header-button-text);
+  }
+  [class*="cms-editor"] [class*="ToolbarContainer"] button[class*="StyledToolbarButton"]:hover,
+  [class*="cms-editor"] [class*="ToolbarContainer"] div[class*="ToolbarDropdownWrapper"]:hover
+  {
+    color: var(--header-button-text-hover);
+  }
+  [class*="cms-editor"] [class*="ToolbarContainer"] button[class*="StyledToolbarButton"][disabled],
+  [class*="cms-editor"] [class*="ToolbarContainer"] div[class*="ToolbarDropdownWrapper"][disabled]
+  {
+    color: var(--disabled-text-color);
+  }
+  [class*="ToolbarToggleLabel"] {
+    color: var(--header-button-text);
+  }
+  [class*="ToolbarToggleLabel-ToolbarToggleLabel"] {
+    color: var(--header-button-text-active);
+  }
+  [class*="cms-editor"] blockquote {
+    color: var(--secondary-text-color);
+    border-left: 3px solid var(--secondary-text-color);
+  }
+  [class*="cms-editor"] code[class*="StyledCode"] {
+    background-color: var(--short-code-bg-color);
+    border-radius: 6px;
+    padding: 4px 6px;
+  }
+  /*code*/
+  [class*="react-codemirror"] .cm-s-material.CodeMirror, [class*="react-codemirror"] .cm-s-material .CodeMirror-gutters {
+    background-color: var(--code-block-bg-color);
+  }
+  [class*="ControlContainer"] [class*="SettingsPaneContainer"] {
+    color: var(--primary-text-color);
+    background-color: var(--dropdownlist-bg);
+    border-left: 1px solid var(--dropdownlist-border);
+    overflow: hidden;
+  }
+  [class*="react-codemirror"] .cm-s-material .CodeMirror-linenumber {
+    color: var(--code-line-number-color);
+  }
+  [class*="ControlContainer"] [class*="SettingsPaneContainer"] > label {
+    color: var(--primary-text-color);
+  }
+  [class*="ControlContainer"] [class*="SettingsPaneContainer"] [class$="-control"] {
+    border: 1px solid var(--dropdownlist-border);
+  }
+  [class*="ControlContainer"] button[class*="StyledSettingsButton-button"] {
+    background-color: transparent;
+    color: var(--header-button-text);
+  }
+  [class*="ControlContainer"] button[class*="StyledSettingsButton-button"]:hover {
+    color: var(--header-button-text-hover);
+  }
+  .CodeMirror-vscrollbar, .CodeMirror-hscrollbar {
+    cursor: default;
+  }
+  .CodeMirror-vscrollbar::-webkit-scrollbar-track, .CodeMirror-hscrollbar::-webkit-scrollbar-track {
+    background: var(--code-block-bg-color) !important;
+  }
+}
