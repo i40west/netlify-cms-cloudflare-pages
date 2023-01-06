@@ -46,7 +46,12 @@ export async function onRequest(context) {
         );
         const result = await response.json();
         if (result.error) {
-            return new Response(renderBody('error', result), { status: 401 });
+            return new Response(renderBody('error', result), {
+                headers: {
+                    'content-type': 'text/html;charset=UTF-8',
+                },
+                status: 401 
+            });
         }
         const token = result.access_token;
         const provider = 'github';
@@ -54,11 +59,19 @@ export async function onRequest(context) {
             token,
             provider,
         });
-        return new Response(responseBody, { status: 200 });
+        return new Response(responseBody, { 
+            headers: {
+                'content-type': 'text/html;charset=UTF-8',
+            },
+            status: 200 
+        });
 
     } catch (error) {
         console.error(error);
         return new Response(error.message, {
+            headers: {
+                'content-type': 'text/html;charset=UTF-8',
+            },
             status: 500,
         });
     }
