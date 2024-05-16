@@ -1,6 +1,6 @@
-# Decap-cms-cloudflare-pages
+# netlify-cms-cloudflare-pages
 
-[Decap CMS](https://www.decapcms.org) needs to authenticate to Github with OAuth. Github needs a server to talk to during the authentication process. If you’re hosting at Netlify, they take care of that. If not, you’re on your own, and the documentation is... imperfect. 😂
+[Decap CMS](https://www.decapcms.org) (formerly Netlify CMS) needs to authenticate to Github with OAuth. Github needs a server to talk to during the authentication process. If you’re hosting at Netlify, they take care of that. If not, you’re on your own, and the documentation is... imperfect. 😂
 
 If you’re deploying to [Cloudflare Pages](https://pages.cloudflare.com) this may be the code you’re looking for. It provides API endpoints for Github to talk to, running on Cloudflare Functions. Functions are kind of like Cloudflare Workers, but they run right from your Pages site.
 
