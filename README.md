@@ -5,14 +5,13 @@
 If you’re deploying to [Cloudflare Pages](https://pages.cloudflare.com) this may be the code you’re looking for. It provides API endpoints for Github to talk to, running on Cloudflare Functions. Functions are kind of like Cloudflare Workers, but they run right from your Pages site.
 
 ## Credits
-This is based on [i40west/netlify-cms-cloudflare-pages](https://github.com/i40west/netlify-cms-cloudflare-pages) and [d3v1an7/netlify-cms-oauth-cloudflare](https://github.com/d3v1an7/netlify-cms-oauth-cloudflare) adapted for Cloudflare Functions. 
-I just Modified it [https://indexedev.com](https://indexedev.com) 
+This is based on [d3v1an7/netlify-cms-oauth-cloudflare](https://github.com/d3v1an7/netlify-cms-oauth-cloudflare) adapted for Cloudflare Functions. 
 
 ## Installation
 
 ### 1. Create OAuth application at Github
 
-Go to Settings -> Developer Settings and choose [OAuth Apps](https://github.com/settings/developers). Create a new OAuth App. Name it anything you like. **Homepage URL** should be set to your site’s URL. **Authorization callback URL** is the important part; it, too, can be set to your homepage URL (like `https://indexedev.com`). Other guides say to set this to the callback API endpoint, but the documented requirement is that the callback URL be a subdirectory of this URL, and using the callback URL itself didn’t work for me.
+Go to Settings -> Developer Settings and choose [OAuth Apps](https://github.com/settings/developers). Create a new OAuth App. Name it anything you like. **Homepage URL** should be set to your site’s URL. **Authorization callback URL** is the important part; it, too, can be set to your homepage URL (like `https://example.com`). Other guides say to set this to the callback API endpoint, but the documented requirement is that the callback URL be a subdirectory of this URL, and using the callback URL itself didn’t work for me.
 
 Github will give you a **Client ID**, and you can generate a **Client Secret** at this time. You will need both.
 
@@ -26,7 +25,7 @@ Take the `functions` directory from this repo and add it to your project at the 
 
 If you haven’t already installed the Decap CMS files, take the `static/admin` directory from this repo and add it to your `static` directory (for Hugo) or wherever you add files to be deployed as-is to your site. There are two files under `admin`, a stub HTML file that loads the CMS, and the CMS config file `config.yml`. You can change the name of the `admin` directory.
 
-The config file included here is a starter file only; you need to set this up for your site, which is beyond the scope of these instructions. However, you must set `base_url` in this config to the URL of your site (like `https://indexedev.com`). Setting `auth_endpoint` here is optional because the default path works for the way this repo is set up.
+The config file included here is a starter file only; you need to set this up for your site, which is beyond the scope of these instructions. However, you must set `base_url` in this config to the URL of your site (like `https://example.com`). Setting `auth_endpoint` here is optional because the default path works for the way this repo is set up.
 
 ### 4. Profit!
 
