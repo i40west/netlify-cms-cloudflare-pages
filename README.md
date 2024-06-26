@@ -25,7 +25,7 @@ Take the `functions` directory from this repo and add it to your project at the 
 
 If you haven’t already installed the Decap CMS files, take the `static/admin` directory from this repo and add it to your `static` directory (for Hugo) or wherever you add files to be deployed as-is to your site. There are two files under `admin`, a stub HTML file that loads the CMS, and the CMS config file `config.yml`. You can change the name of the `admin` directory.
 
-The config file included here is a starter file only; you need to set this up for your site, which is beyond the scope of these instructions. However, you must set `base_url` in this config to the URL of your site (like `https://example.com`). Setting `auth_endpoint` here is optional because the default path works for the way this repo is set up.
+The config file included here is a starter file only; you need to set this up for your site, which is beyond the scope of these instructions. However, you must set `site_domain` and `base_url` in this config to the URL of your site (like `https://example.com`). Setting `auth_endpoint` here is optional because the default path works for the way this repo is set up.
 
 ### 4. Profit!
 
